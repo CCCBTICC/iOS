@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ITLeftMenuVC.h
 //  interview
 //
 //  Created by Dongjie Zhang on 3/21/15.
@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RESideMenu.h"
 
-@interface ViewController : UIViewController
-
+@interface ITLeftMenuVC : UIViewController
 
 @end
-
