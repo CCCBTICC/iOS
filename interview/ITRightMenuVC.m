@@ -35,7 +35,7 @@
 */
 
 - (IBAction)btn_go_pressed:(id)sender {
-    [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"cataVC"]] animated:YES];
+    [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"cateVC"]] animated:YES];
     [self.sideMenuViewController hideMenuViewController];
 }
 @end

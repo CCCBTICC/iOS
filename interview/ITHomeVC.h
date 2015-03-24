@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "RESideMenu.h"
 
-@interface ITHomeVC : UIViewController
+@interface ITHomeVC : UIViewController<UITableViewDataSource, UITableViewDelegate>
+{
+    NSArray * list;
+}
+
 
 @end

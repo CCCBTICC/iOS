@@ -1,22 +1,34 @@
 //
-//  ITHomeVC.m
+//  ITCategory.m
 //  interview
 //
-//  Created by Dongjie Zhang on 3/21/15.
-//  Copyright (c) 2015 CCCBTICC. All rights reserved.
+//  Created by Brian Chen on 2015/3/24.
+//  Copyright (c) 2015年 CCCBTICC. All rights reserved.
 //
 
-#import "ITHomeVC.h"
+#import "ITCategory.h"
+#import "WebAPI.h"
 
-@interface ITHomeVC ()
+@interface ITCategory ()
 
 @end
 
-@implementation ITHomeVC
+@implementation ITCategory
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    NSData * data = [WebAPI getDataFrom:SERVER_URL];
+    NSArray * list = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+    NSLog(@"%@", question_list);
+    
+    for(NSDictionary * i in list){
+        [i objectForKey:@"name"];
+        
+        NSLog(@"%@", [i objectForKey:@"name"]);
+    }
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,7 +41,7 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return list.count;
+    return question_list.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -37,7 +49,6 @@
     
     return cell;
 }
-
 /*
 #pragma mark - Navigation
 

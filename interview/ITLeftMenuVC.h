@@ -11,4 +11,5 @@
 
 @interface ITLeftMenuVC : UIViewController
 
+- (IBAction)btn_home:(id)sender;
 @end

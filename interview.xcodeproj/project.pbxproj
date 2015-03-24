@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B83E1561AC21293005CDC95 /* ITCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B83E1551AC21293005CDC95 /* ITCategory.m */; };
+		3B83E15A1AC217DC005CDC95 /* ITQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B83E1591AC217DC005CDC95 /* ITQuestion.m */; };
+		3B83E15F1AC21D50005CDC95 /* WebAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B83E15E1AC21D50005CDC95 /* WebAPI.m */; };
 		B6CF6D181ABDD4A4003182C2 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = B6CF6D131ABDD4A4003182C2 /* RECommonFunctions.m */; };
 		B6CF6D191ABDD4A4003182C2 /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = B6CF6D151ABDD4A4003182C2 /* RESideMenu.m */; };
 		B6CF6D1A1ABDD4A4003182C2 /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = B6CF6D171ABDD4A4003182C2 /* UIViewController+RESideMenu.m */; };
@@ -34,6 +37,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B83E1541AC21293005CDC95 /* ITCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITCategory.h; sourceTree = "<group>"; };
+		3B83E1551AC21293005CDC95 /* ITCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITCategory.m; sourceTree = "<group>"; };
+		3B83E1581AC217DC005CDC95 /* ITQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITQuestion.h; sourceTree = "<group>"; };
+		3B83E1591AC217DC005CDC95 /* ITQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITQuestion.m; sourceTree = "<group>"; };
+		3B83E15B1AC21AFB005CDC95 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		3B83E15C1AC21C9F005CDC95 /* interview_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = interview_Prefix.pch; sourceTree = "<group>"; };
+		3B83E15D1AC21D50005CDC95 /* WebAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebAPI.h; sourceTree = "<group>"; };
+		3B83E15E1AC21D50005CDC95 /* WebAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebAPI.m; sourceTree = "<group>"; };
 		B6CF6D121ABDD4A4003182C2 /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
 		B6CF6D131ABDD4A4003182C2 /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
 		B6CF6D141ABDD4A4003182C2 /* RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESideMenu.h; sourceTree = "<group>"; };
@@ -80,6 +91,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B83E1571AC21794005CDC95 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				3B83E15D1AC21D50005CDC95 /* WebAPI.h */,
+				3B83E15E1AC21D50005CDC95 /* WebAPI.m */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		3B83E1601AC21D83005CDC95 /* DataStorage */ = {
+			isa = PBXGroup;
+			children = (
+				3B83E1581AC217DC005CDC95 /* ITQuestion.h */,
+				3B83E1591AC217DC005CDC95 /* ITQuestion.m */,
+			);
+			name = DataStorage;
+			sourceTree = "<group>";
+		};
 		B6CF6D111ABDD4A4003182C2 /* RESideMenu */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +134,8 @@
 			isa = PBXGroup;
 			children = (
 				B6CF6D1D1ABDD4F1003182C2 /* logic */,
+				3B83E1541AC21293005CDC95 /* ITCategory.h */,
+				3B83E1551AC21293005CDC95 /* ITCategory.m */,
 			);
 			name = AppViewController;
 			sourceTree = "<group>";
@@ -145,6 +176,9 @@
 		B6ED76E71ABDC6CD0043D072 /* interview */ = {
 			isa = PBXGroup;
 			children = (
+				3B83E15B1AC21AFB005CDC95 /* Constants.h */,
+				3B83E1601AC21D83005CDC95 /* DataStorage */,
+				3B83E1571AC21794005CDC95 /* API */,
 				B6CF6D1C1ABDD4E5003182C2 /* AppViewController */,
 				B6CF6D1B1ABDD4AA003182C2 /* AppExternal */,
 				B6ED76EC1ABDC6CD0043D072 /* AppDelegate.h */,
@@ -163,6 +197,7 @@
 			children = (
 				B6ED76E91ABDC6CD0043D072 /* Info.plist */,
 				B6ED76EA1ABDC6CD0043D072 /* main.m */,
+				3B83E15C1AC21C9F005CDC95 /* interview_Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -287,6 +322,8 @@
 				B6ED76EE1ABDC6CD0043D072 /* AppDelegate.m in Sources */,
 				B6CF6D261ABDD640003182C2 /* ITLeftMenuVC.m in Sources */,
 				B6CF6D181ABDD4A4003182C2 /* RECommonFunctions.m in Sources */,
+				3B83E1561AC21293005CDC95 /* ITCategory.m in Sources */,
+				3B83E15A1AC217DC005CDC95 /* ITQuestion.m in Sources */,
 				B6CF6D231ABDD5CB003182C2 /* ITHomeVC.m in Sources */,
 				B6CF6D291ABDD64E003182C2 /* ITRightMenuVC.m in Sources */,
 				B6ED76EB1ABDC6CD0043D072 /* main.m in Sources */,
@@ -294,6 +331,7 @@
 				B6CF6D1A1ABDD4A4003182C2 /* UIViewController+RESideMenu.m in Sources */,
 				B6ED76F11ABDC6CD0043D072 /* interview.xcdatamodeld in Sources */,
 				B6CF6D201ABDD50C003182C2 /* ITRootVC.m in Sources */,
+				3B83E15F1AC21D50005CDC95 /* WebAPI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +453,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = interview/interview_Prefix.pch;
 				INFOPLIST_FILE = interview/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -425,6 +464,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = interview/interview_Prefix.pch;
 				INFOPLIST_FILE = interview/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
