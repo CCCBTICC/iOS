@@ -16,6 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UIImageView *back = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    back.image = [UIImage imageNamed:@"menu_back.png"];
+    [self.view insertSubview:back atIndex:0];
     // Do any additional setup after loading the view.
 }
 

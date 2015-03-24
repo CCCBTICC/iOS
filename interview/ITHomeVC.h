@@ -9,6 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "RESideMenu.h"
 
-@interface ITHomeVC : UIViewController
+@interface ITHomeVC : UIViewController <UIScrollViewDelegate>{
+    NSMutableArray *arr_question;
+}
+
+@property (nonatomic, strong) IBOutlet UIScrollView *scrollView;
+@property (nonatomic, strong) IBOutlet UIPageControl *pageControl;
 
 @end
