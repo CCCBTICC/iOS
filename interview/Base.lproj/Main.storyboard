@@ -92,9 +92,9 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1113" y="336"/>
+            <point key="canvasLocation" x="1112" y="331"/>
         </scene>
-        <!--View Controller-->
+        <!--Category-->
         <scene sceneID="SBp-2c-a7g">
             <objects>
                 <viewController storyboardIdentifier="cataVC" id="970-FL-ghi" sceneMemberID="viewController">
@@ -105,9 +105,37 @@
                     <view key="view" contentMode="scaleToFill" id="V6r-gl-bYW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="128" sectionHeaderHeight="22" sectionFooterHeight="22" id="KpA-NE-LYp">
+                                <rect key="frame" x="10" y="0.0" width="140" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="question_Cell" rowHeight="128" id="gNA-RB-SbC">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gNA-RB-SbC" id="JBh-iZ-y79">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="89Z-39-JY6">
+                                                    <rect key="frame" x="29" y="35" width="83" height="58"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="970-FL-ghi" id="h41-sL-wBi"/>
+                                    <outlet property="delegate" destination="970-FL-ghi" id="E5f-88-300"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="6oK-hz-ghp">
+                    <navigationItem key="navigationItem" title="Category" id="6oK-hz-ghp">
                         <barButtonItem key="leftBarButtonItem" title="left" id="vhW-HZ-Zok">
                             <connections>
                                 <action selector="presentLeftMenuViewController:" destination="970-FL-ghi" id="Cv2-Vn-LAh"/>
@@ -142,6 +170,16 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rtQ-HY-6GP">
+                                <rect key="frame" x="19" y="81" width="41" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Home">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btn_home:" destination="UXC-2L-hN8" eventType="touchUpInside" id="wxL-GX-25S"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

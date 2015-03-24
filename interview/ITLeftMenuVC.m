@@ -37,4 +37,9 @@
 }
 */
 
+- (IBAction)btn_home:(id)sender {
+    [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"homeVC"]] animated:YES];
+    [self.sideMenuViewController hideMenuViewController];
+
+}
 @end
