@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D87h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--RootVC-->
@@ -34,7 +35,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" ambiguous="YES" misplaced="YES" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="Sjh-zu-NJ8">
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="Sjh-zu-NJ8">
                                 <rect key="frame" x="42" y="120" width="236" height="44"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -43,24 +44,33 @@
                                     <outlet property="delegate" destination="SQv-sB-v21" id="GW2-ar-Pa5"/>
                                 </connections>
                             </searchBar>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.59999999999999998" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="74R-2A-4HV">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.59999999999999998" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="74R-2A-4HV">
                                 <rect key="frame" x="42" y="245" width="236" height="223"/>
                                 <color key="backgroundColor" red="0.86691881609999999" green="0.86691881609999999" blue="0.86691881609999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="SQv-sB-v21" id="cfu-zK-2ls"/>
                                 </connections>
                             </scrollView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="10" translatesAutoresizingMaskIntoConstraints="NO" id="FWX-9V-zfv">
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="10" translatesAutoresizingMaskIntoConstraints="NO" id="FWX-9V-zfv">
                                 <rect key="frame" x="141" y="476" width="39" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="39" id="Idu-9m-fUb"/>
+                                </constraints>
                                 <color key="pageIndicatorTintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="currentPageIndicatorTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="gVa-jt-uAD" firstAttribute="top" secondItem="FWX-9V-zfv" secondAttribute="bottom" constant="55" id="4hu-zP-3wM"/>
                             <constraint firstAttribute="centerX" secondItem="FWX-9V-zfv" secondAttribute="centerX" id="DeM-jn-mrc"/>
+                            <constraint firstItem="FWX-9V-zfv" firstAttribute="top" secondItem="74R-2A-4HV" secondAttribute="bottom" constant="8" symbolic="YES" id="Igs-D6-jGe"/>
                             <constraint firstAttribute="centerX" secondItem="Sjh-zu-NJ8" secondAttribute="centerX" id="U2F-Cv-r7N"/>
                             <constraint firstAttribute="centerX" secondItem="74R-2A-4HV" secondAttribute="centerX" id="YgQ-ur-LgU"/>
+                            <constraint firstItem="Sjh-zu-NJ8" firstAttribute="top" secondItem="qQg-eq-IsX" secondAttribute="bottom" constant="56" id="aNo-jl-A5r"/>
+                            <constraint firstItem="Sjh-zu-NJ8" firstAttribute="leading" secondItem="74R-2A-4HV" secondAttribute="leading" id="lxR-gV-0KH"/>
+                            <constraint firstItem="Sjh-zu-NJ8" firstAttribute="leading" secondItem="5hJ-sN-L4V" secondAttribute="leadingMargin" constant="26" id="v5E-sG-9lB"/>
+                            <constraint firstItem="74R-2A-4HV" firstAttribute="top" secondItem="Sjh-zu-NJ8" secondAttribute="bottom" constant="81" id="y61-4f-8cD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="INTERVIEWAID" id="L4u-W5-y0b">

@@ -15,6 +15,8 @@
 		B6BC06831AC21EB40004B20E /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = B6BC067B1AC21EB40004B20E /* SBJsonBase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B6BC06841AC21EB40004B20E /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B6BC067D1AC21EB40004B20E /* SBJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B6BC06851AC21EB40004B20E /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = B6BC067F1AC21EB40004B20E /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B6BC068C1AC2373D0004B20E /* ITQuestionHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = B6BC068B1AC2373D0004B20E /* ITQuestionHolder.m */; };
+		B6BC06901AC247580004B20E /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B6BC068F1AC247580004B20E /* icon.png */; };
 		B6CF6D181ABDD4A4003182C2 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = B6CF6D131ABDD4A4003182C2 /* RECommonFunctions.m */; };
 		B6CF6D191ABDD4A4003182C2 /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = B6CF6D151ABDD4A4003182C2 /* RESideMenu.m */; };
 		B6CF6D1A1ABDD4A4003182C2 /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = B6CF6D171ABDD4A4003182C2 /* UIViewController+RESideMenu.m */; };
@@ -57,6 +59,11 @@
 		B6BC067D1AC21EB40004B20E /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
 		B6BC067E1AC21EB40004B20E /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		B6BC067F1AC21EB40004B20E /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		B6BC06861AC2347D0004B20E /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		B6BC06881AC234A30004B20E /* constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = constant.h; sourceTree = "<group>"; };
+		B6BC068A1AC2373D0004B20E /* ITQuestionHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITQuestionHolder.h; sourceTree = "<group>"; };
+		B6BC068B1AC2373D0004B20E /* ITQuestionHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITQuestionHolder.m; sourceTree = "<group>"; };
+		B6BC068F1AC247580004B20E /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		B6CF6D121ABDD4A4003182C2 /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
 		B6CF6D131ABDD4A4003182C2 /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
 		B6CF6D141ABDD4A4003182C2 /* RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESideMenu.h; sourceTree = "<group>"; };
@@ -106,6 +113,7 @@
 		B6BC06651AC20EDC0004B20E /* AppResource */ = {
 			isa = PBXGroup;
 			children = (
+				B6BC068F1AC247580004B20E /* icon.png */,
 				B6BC06661AC20EE70004B20E /* Background */,
 			);
 			name = AppResource;
@@ -140,6 +148,24 @@
 			name = JSON;
 			sourceTree = "<group>";
 		};
+		B6BC06871AC234910004B20E /* AppUtility */ = {
+			isa = PBXGroup;
+			children = (
+				B6BC06881AC234A30004B20E /* constant.h */,
+			);
+			name = AppUtility;
+			sourceTree = "<group>";
+		};
+		B6BC06891AC237130004B20E /* AppDataModel */ = {
+			isa = PBXGroup;
+			children = (
+				B6ED76EF1ABDC6CD0043D072 /* interview.xcdatamodeld */,
+				B6BC068A1AC2373D0004B20E /* ITQuestionHolder.h */,
+				B6BC068B1AC2373D0004B20E /* ITQuestionHolder.m */,
+			);
+			name = AppDataModel;
+			sourceTree = "<group>";
+		};
 		B6CF6D111ABDD4A4003182C2 /* RESideMenu */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,8 +192,6 @@
 			isa = PBXGroup;
 			children = (
 				B6CF6D1D1ABDD4F1003182C2 /* logic */,
-				3B83E1541AC21293005CDC95 /* ITCategory.h */,
-				3B83E1551AC21293005CDC95 /* ITCategory.m */,
 			);
 			name = AppViewController;
 			sourceTree = "<group>";
@@ -208,6 +232,8 @@
 		B6ED76E71ABDC6CD0043D072 /* interview */ = {
 			isa = PBXGroup;
 			children = (
+				B6BC06891AC237130004B20E /* AppDataModel */,
+				B6BC06871AC234910004B20E /* AppUtility */,
 				B6BC06651AC20EDC0004B20E /* AppResource */,
 				B6CF6D1C1ABDD4E5003182C2 /* AppViewController */,
 				B6CF6D1B1ABDD4AA003182C2 /* AppExternal */,
@@ -216,7 +242,6 @@
 				B6ED76F51ABDC6CD0043D072 /* Main.storyboard */,
 				B6ED76F81ABDC6CD0043D072 /* Images.xcassets */,
 				B6ED76FA1ABDC6CD0043D072 /* LaunchScreen.xib */,
-				B6ED76EF1ABDC6CD0043D072 /* interview.xcdatamodeld */,
 				B6ED76E81ABDC6CD0043D072 /* Supporting Files */,
 			);
 			path = interview;
@@ -227,7 +252,7 @@
 			children = (
 				B6ED76E91ABDC6CD0043D072 /* Info.plist */,
 				B6ED76EA1ABDC6CD0043D072 /* main.m */,
-				3B83E15C1AC21C9F005CDC95 /* interview_Prefix.pch */,
+				B6BC06861AC2347D0004B20E /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -331,6 +356,7 @@
 			files = (
 				B6ED76F71ABDC6CD0043D072 /* Main.storyboard in Resources */,
 				B6BC06701AC214A90004B20E /* home_back.png in Resources */,
+				B6BC06901AC247580004B20E /* icon.png in Resources */,
 				B6BC066E1AC213770004B20E /* menu_back.png in Resources */,
 				B6ED76FC1ABDC6CD0043D072 /* LaunchScreen.xib in Resources */,
 				B6ED76F91ABDC6CD0043D072 /* Images.xcassets in Resources */,
@@ -351,6 +377,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6BC068C1AC2373D0004B20E /* ITQuestionHolder.m in Sources */,
 				B6ED76EE1ABDC6CD0043D072 /* AppDelegate.m in Sources */,
 				B6CF6D261ABDD640003182C2 /* ITLeftMenuVC.m in Sources */,
 				B6CF6D181ABDD4A4003182C2 /* RECommonFunctions.m in Sources */,
@@ -367,7 +394,6 @@
 				B6ED76F11ABDC6CD0043D072 /* interview.xcdatamodeld in Sources */,
 				B6BC06811AC21EB40004B20E /* NSString+SBJSON.m in Sources */,
 				B6CF6D201ABDD50C003182C2 /* ITRootVC.m in Sources */,
-				3B83E15F1AC21D50005CDC95 /* WebAPI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,7 +515,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = interview/interview_Prefix.pch;
+				GCC_PREFIX_HEADER = interview/PrefixHeader.pch;
 				INFOPLIST_FILE = interview/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -500,7 +526,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = interview/interview_Prefix.pch;
+				GCC_PREFIX_HEADER = interview/PrefixHeader.pch;
 				INFOPLIST_FILE = interview/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

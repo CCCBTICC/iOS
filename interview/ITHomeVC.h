@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "RESideMenu.h"
+#import "ITQuestionHolder.h"
 
 @interface ITHomeVC : UIViewController <UIScrollViewDelegate>{
     NSMutableArray *arr_question;
